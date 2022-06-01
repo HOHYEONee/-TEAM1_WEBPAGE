@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Jaeseong Bae">
+        <title>Interior</title>
+        <link rel="stylesheet" href="interior.css">
+        <script>
+            function loadImages(id, count) {
+                var obj = document.getElementById(id);
+                for (var i = 1; i <= count; i++) {
+                    var img = document.createElement("img");
+                    img.src = new String().concat("resources-int/", id, i, ".jpg");
+                    if (i == count) {
+                        img.style.marginRight = 0;
+                    }
+                    obj.appendChild(img);
+                }
+            }
+            
+            window.onload = function() {
+                loadImages("livingroom", 5);
+                loadImages("kitchen", 5);
+                loadImages("bedroom", 5);
+                loadImages("bathroom", 4);
+                loadImages("restaurant", 5);
+            }
+            
+            function move(){
+                location.href = "Main page.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <input id="nav-fold" type="checkbox">
+            <label for="nav-fold"><span class="center">MENU</span></label>
+            <a class="nav-item" href="main page.html">HOME</a>
+            <a class="nav-item" href="man.html">MAN</a>
+            <a class="nav-item" href="woman.html">WOMAN</a>
+            <a class="nav-item active" href="interior.html">INTERIOR</a>
+            <a class="nav-item" href="cosmetic.html">COSMETIC</a>
+        </div>
+        <div class="page">
+            <div class="header">
+                <div class="center">
+                    <img src="cosimg/logo.jpg" onclick="move()" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="intro">
+                <img src="resources-int/intro.png">
+                <div class="center title">
+                    <img src="resources-int/title.jpg">
+                    <h1>INTERIOR</h1>
+                    <p>
+                        Very Peri is a symbol of the global zeitgeist of the moment and
+                        the transition we are going through. As we emerge from an intense
+                        period of isolation, our notions and standards are changing, and
+                        our physical and digital lives have merged in new ways. Digital
+                        design helps us to stretch the limits of reality, opening the door
+                        to a dynamic virtual world where we can explore and create new color
+                        possibilities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <h3>LIVING ROOM</h3>
+                <div id="livingroom"></div>
+            </div>
+            <div class="gallery">
+                <h3>KITCHEN</h3>
+                <div id="kitchen"></div>
+            </div>
+            <div class="gallery">
+                <h3>BEDROOM</h3>
+                <div id="bedroom"></div>
+            </div>
+            <div class="gallery">
+                <h3>BATHROOM</h3>
+                <div id="bathroom"></div>
+            </div>
+            <div class="gallery">
+                <h3>RESTAURANT</h3>
+                <div id="restaurant"></div>
+            </div>
+            <br><br>
+        </div>
+    </body>
+</html>
