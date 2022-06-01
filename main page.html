@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 180%;
+      }
+
+      .background {
+        width: 100%; height: 100%;
+        background-color: #6667AB;
+      }
+
+      .contentsbox {
+        width: 80%; height: 100%;
+        border-radius: 60px;
+        margin: auto;
+        background-color: white;
+        text-align: center;
+      }
+
+      .contentsbox h2{
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .abimgs {
+        text-align: center;
+        height: 10%;
+        position: relative;
+      }
+
+      .fVeryperi {
+        width: 50%;
+        height: 150%;
+        position: absolute; left: 25%;
+        display: block;
+      }
+
+      .Veryperi {
+        width: 50%;
+        height: 150%;
+        position: absolute; left: 25%;
+        display: none;
+      }
+      
+      .botton {
+        width: 50%;
+        height: 50%;
+      }
+      .botton img{
+        width: 450px;
+        height: 450px;
+      }
+
+      .bottontable {
+        margin-left: auto; margin-right: auto; margin-top: 0;
+        border-spacing: 100px;
+      }
+
+      .EasterEgg {
+        width: 30px;
+        height: 30px;
+        position: absolute; top: 5px; right: 10px;
+      }
+
+      .logo {
+        width: 100%;
+      }
+
+      .navbar 
+      {
+        background-color: #0000007F;
+        color: lightgray;
+        text-align: center;
+        width: 100px;
+        position: fixed;
+        left: 10px;
+        top: 100px;
+        z-index: 1;
+        padding: 5px;
+      }
+
+      .nav 
+      {
+          display: inline-block;
+          width: 100%;
+          padding: 5px 0;
+          color: lightgray;
+          text-decoration: none;
+      }
+
+      .nav:hover 
+      {
+          background-color: #6667AB7F;
+      }
+
+      .active 
+      {
+        background-color: #6667AB;
+      }
+
+      .active:hover 
+      {
+        background-color: #6667AB;
+      }
+
+      .exp
+      {
+        background-color: #6667AB;
+        border: solid;
+        border-color: #f4bfc7;
+        border-radius: 60px;
+      }
+
+      .exp p
+      {
+        font-size: 16pt; 
+        font-style: italic; 
+        color: white;
+      }
+
+      .exp h2
+      {
+        font-style: italic;
+        font-weight: bold;
+        color: white;
+      }
+
+      .how
+      {
+        background-color: whitesmoke;
+        border-radius: 60px;
+      }
+
+      /* 위 -> class                아래 -> id */
+
+      #top {
+        text-align: center;
+        position: relative;
+        background-color: aliceblue;
+        border-color: White;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 60px;
+      }
+ 
+      #top h1
+      {
+        font-size: 40pt;
+        font-style: italic;
+      }
+
+      #top p{
+        position: absolute;
+        bottom: 0px;
+        right: 30px;
+        font-size: 10pt;
+      }
+      
+      #nav-fold 
+      {
+        display: none;
+      }
+
+      #nav-fold + label 
+      {
+        display: none;
+        position: relative;
+        font-size: 8px;
+        width: 40px;
+        height: 20px;
+        background-color: #777;
+      }
+
+      #nav-fold:checked + label 
+      {
+        background-color: #6667AB;
+        margin-bottom: 5px;
+      }
+
+
+      @media screen and (max-width: 1500px) 
+      {
+        html, body 
+        {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 230%;
+        }
+
+        .navbar
+        {
+          width: auto;
+          max-width: 100px;
+        }
+
+        .nav-fold 
+        {
+          display: initial;        
+        }
+
+        .nav-fold:checked ~ a 
+        {
+          display: inline-block;
+        }
+
+        .nav 
+        {
+          display: none;
+        }
+
+        .botton img
+        {
+          width: 300px;
+          height: 300px;
+          margin-right: 10px;
+        }
+
+        #top p
+        {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1000px) 
+      {
+        html, body 
+        {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 230%;
+        }
+
+        .top h1 
+        {
+          margin: 5px 0 0 0;
+          font-size: 28px;
+        }
+
+        .top p 
+        {
+          display: none;
+        }
+
+        .bottontable{
+          border-spacing: 10px;
+        }
+
+        .botton img
+        {
+          width: 200px;
+          height: 200px;
+          margin-right: 10px;
+        }
+
+        #top p
+        {
+          display: none;
+        }
+      }
+
+    /* 위 -> css             아래 -> 자바스크립트 */
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      function move(a) {
+        switch(a)
+        {
+          case 1:
+            location.href = "man.html";
+            break;
+
+          case 2:
+            location.href = "woman.html";
+            breaK;
+
+          case 3:
+            location.href = "interior.html";
+            breaK;
+
+          case 4:
+            location.href = "cosmetic.html";
+            breaK;
+        }
+      }
+
+      function easteregg()
+      {
+        var num = prompt("Enter the secret code");
+        if(num == 102103171)
+        {
+          location.href = "EasterEgg.html";
+        }
+        else
+        {
+          alert("Wrong.");
+        }
+      }
+
+
+    /*  아래는 JQeury 포함(이미지 페이드인, 아웃 용)  */
+
+    var now = 0;
+    var img = 4;
+    
+    $('img').eq(0).siblings().hide();
+
+    function slide()
+    {
+      if (now == img){
+        $('img').eq(now).fadeOut(1000);
+        $('img').eq(0).fadeIn(1000);
+        now = 0;
+      }
+      else{
+        $('img').eq(now).fadeOut(1000);
+        $('img').eq(now+1).fadeIn(1000);
+        now++;
+      }
+    }
+
+    setInterval(slide, 3000);
+
+
+    function switching(n)
+    {
+      switch(n)
+      {
+        case 1:
+        $('img.0').hide();
+        $('img.1').fadeIn(1000);
+        break;
+
+        case 2:
+        $('img.2').hide();
+        $('img.3').fadeIn(1000);
+        break;
+
+        case 3:
+        $('img.4').hide();
+        $('img.5').fadeIn(1000);
+        break;
+
+        case 4:
+        $('img.6').hide();
+        $('img.7').fadeIn(1000);
+        break;
+      }
+    }
+
+    function reverse(r)
+    {
+      switch(r)
+      {
+        case 1:
+        $('img.1').hide();
+        $('img.0').fadeIn(2000);
+        break;
+
+        case 2:
+        $('img.3').hide();
+        $('img.2').fadeIn(2000);
+        break;
+
+        case 3:
+        $('img.5').hide();
+        $('img.4').fadeIn(2000);
+        break;
+
+        case 4:
+        $('img.7').hide();
+        $('img.6').fadeIn(2000);
+        break;
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+      <input id="nav-fold" type="checkbox">
+      <label for="nav-fold"><span class="center">MENU</span></label>
+      <a class="nav active" href="main page.html">HOME</a>
+      <a class="nav" href="man.html">MAN</a>
+      <a class="nav" href="woman.html">WOMAN</a>
+      <a class="nav" href="interior.html">INTERIOR</a>
+      <a class="nav" href="cosmetic.html">COSMETIC</a>
+    </div>
+    <div class="background">
+      <div class="contentsbox">
+        <div id = top>
+          <h1><span style="color: #6667AB;">Color</span> EXHIBITION Main Page</h1>
+          <p>
+            202234852 강호현&emsp;202234929 정성수<br>
+            202234871 김송희&emsp;202138141 정수미<br>
+            202234899 배재성
+          </p>
+        </div>
+        <h1 style="color: #6667AB; font-size: 32pt; font-style: italic;">Products using Very peri</h1>
+        <div class="abimgs">
+          <img class="fVeryperi" src="https://mblogthumb-phinf.pstatic.net/MjAyMjAxMDNfMjI0/MDAxNjQxMTc1Nzg3OTYw.M1LwSwqUFswVRah0K7Y3htTiDXDAST9-qDJ6vdLIq8cg.kobtfQY5QRi5C24C_SIueRu2XnK3rb0H1GsqvV52UJMg.PNG.eden153q/ice_screenshot_20220103-110348.png?type=w800">
+          <img class="Veryperi" src="mainimg/codehint.png">
+          <img class="Veryperi" src="https://img.freepik.com/free-photo/violet-room-very-peri-chair-tv-cabinet-lamp-and-empty-wall-modern-design-interior_258219-388.jpg?w=2000">
+          <img class="Veryperi" src="https://image.shutterstock.com/z/stock-photo-flat-lay-of-makeup-cosmetic-product-on-pink-background-new-trending-pantone-very-peri-2088503629.jpg">
+          <img class="Veryperi" src="http://images.summitmedia-digital.com/spotph/images/2021/12/09/pantone-color-of-the-year-640-1639034023.jpg">       
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="how">
+          <table class="bottontable">
+            <caption><h1 style="color: #6667AB; font-size: 32pt; font-style: italic;">Go to Applications</h1></caption>
+            <tr>
+              <td><div class="botton">
+                <img onclick="move(1)" class="0" src="mainimg/mens.png" onmouseover="switching(1)">
+                <img onclick="move(1)" class="1" style="display: none;" src="mainimg/menb.jpg" onmouseout="reverse(1)">
+              </div></td>
+              <td><div class="botton">
+                <img onclick="move(2)" class="2" src="mainimg/womens.png" onmouseover="switching(2)">
+                <img onclick="move(2)" class="3" style="display: none;" src="mainimg/womenb.jpg" onmouseout="reverse(2)">
+              </div></td>
+            </tr>
+            <tr>
+              <td><div class="botton">
+                <img onclick="move(3)" class="4" src="mainimg/interior.png" onmouseover="switching(3)">
+                <img onclick="move(3)" class="5" style="display: none;" src="mainimg/interiorb.jpg" onmouseout="reverse(3)">
+              </div></td>
+              <td><div class="botton">
+                <img onclick="move(4)" class="6" src="mainimg/cos.png" onmouseover="switching(4)">
+                <img onclick="move(4)" class="7" style="display: none;" src="mainimg/cosb.jpg" onmouseout="reverse(4)">
+              </div></td>
+            </tr>
+          </table>
+        </div>
+        <br><br><br>
+        <div class="exp">
+          <h2>About Veri Peri</h2>
+          <p>
+            Displaying a carefree confidence and a daring curiosity that animates our creative spirit,
+            inquisitive and intriguing PANTONE 17-3938 Very Peri helps us to embrace this altered 
+            landscape of possibilities, opening us up to a new vision as we rewrite our lives. Rekindling 
+            gratitude for some of the qualities that blue represents complemented by a new perspective 
+            that resonates today, PANTONE 17-3938 Very Peri places the future ahead in a new light.
+          </p>
+          <br><br><br>
+          <h2>About Pantone</h2>
+          <p>
+            Pantone Provides A Universal Language Of Color That Enables Color-Critical Decisions 
+            Through Every Stage Of The Workflow For Brands And Manufacturers.
+            More than 10 million designers and producers around the world rely on Pantone products
+            and services to help define, communicate and control color from inspiration to
+            realization – leveraging advanced X-Rite technology to achieve color consistency
+            across various materials and finishes for graphics, fashion and product design.
+            Pantone Standards feature digital and physical color specification and workflow
+            tools. The Pantone Color Institute™ provides customized color standards, brand
+            identity and product color consulting as well as trend forecasting inclusive
+            of Pantone Color of the Year, Fashion Runway Color Trend Reports, color
+            psychology and more. Pantone B2B Licensing incorporates the Pantone Color
+            System into different products and services, enabling licensees to
+            communicate and reproduce approved Pantone values and improve efficiencies
+            for their users.
+          </p>
+        </div>
+        <img class="EasterEgg" src="mainimg/lock.png" onclick="easteregg()">
+      </div>
+    </div>
+    
+  </body>
+</html>
