@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Soomi Jeoung">
+        <title>Women's Fashion</title>
+        <link rel="stylesheet" href="woman.css">
+        <script>
+           function move(){
+                location.href = "main page.html";
+            } 
+        </script>
+    </head>
+    <body>
+        <div class="navbar">
+            <input id="nav-fold" type="checkbox">
+            <label for="nav-fold"><span class="center">MENU</span></label>
+            <a class="nav" href="main page.html">HOME</a>
+            <a class="nav" href="man.html">MAN</a>
+            <a class="nav active" href="woman.html">WOMAN</a>
+            <a class="nav" href="interior.html">INTERIOR</a>
+            <a class="nav" href="cosmetic.html">COSMETIC</a>
+        </div>
+        <div class="page">
+            <div class="header">
+                <div class="center">
+                    <img src="cosimg/logo.jpg" onclick="move()" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="intro">
+                <img src="womenimg/intro_image.jpg" class="intro_img">
+                <div class="center title">
+                    <h1>WOMEN'S FASHION</h1>
+                    <br>
+                    <p>
+                        Introducing the Pantone Color of the Year 2022, 
+                        PANTONE 17-3938 Very Peri, 
+                        a dynamic periwinkle blue hue with a vivifying violet red undertone 
+                        blends the faithfulness and constancy of blue with the energy and excitement of red.
+                        Very peri displays a spritely, joyous attitude and dynamic presence that encourages 
+                        courageous creativity and imaginative expression.
+                        Last year, the colour authority broke tradition and announed not one, but two defining 
+                        Colors of the Year 2021 that were chosed to help people fortify themselves with energy, 
+                        clarity and hope admist uncertanity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <h3>TOP</h3>
+                <table>
+                    <td><img src="womenimg/top1.jpg"></td>
+                    <td><img src="womenimg/top2.jpg"></td>
+                    <td><img src="womenimg/top3.jpg"></td>
+                    <td><img src="womenimg/top4.jpg"></td>
+                    <td><img src="womenimg/top5.jpg"></td>
+                    <td><img src="womenimg/top6.jpg"></td>
+                </table>
+                <div id="top"></div>
+            </div>
+            <div class="gallery">
+                <h3>BOTTOM</h3>
+                <table>
+                    <td><img src="womenimg/bottom1.jpg"></td>
+                    <td><img src="womenimg/bottom2.jpg"></td>
+                    <td><img src="womenimg/bottom3.jpg"></td>
+                    <td><img src="womenimg/bottom4.jpg"></td>
+                    <td><img src="womenimg/bottom5.jpg"></td>
+                </table>
+                <div id="bottom"></div>
+            </div>
+            <div class="gallery">
+                <h3>ACC</h3>
+                <table>
+                    <td><img src="womenimg/acc1.jpg"></td>
+                    <td><img src="womenimg/acc2.jpg"></td>
+                    <td><img src="womenimg/acc3.jpg"></td>
+                    <td><img src="womenimg/acc4.jpg"></td>
+                    <td><img src="womenimg/acc5.jpg"></td>
+                    <td><img src="womenimg/acc6.jpg"></td>
+                    <td><img src="womenimg/acc7.jpg"></td>
+                </table>
+                <div id="accessary"></div>
+            </div>
+            <div class="gallery">
+                <h3>COLOR PALETTE</h3>
+                <p>You can use the color palette below for a variety of combinations</p>
+                <table>
+                    <td><img src="womenimg/palette1.jpg" class="p_img"></td>
+                    <td><img src="womenimg/palette2.jpg" class="p_img"></td>
+                    <td><img src="womenimg/palette3.jpg" class="p_img"></td>
+                    <td><img src="womenimg/palette4.jpg" class="p_img"></td>
+                </table>
+                <div id="palette"></div>
+            </div>
+            <br><br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+    <head>
+        <title>EasterEgg</title>
+        <style>
+            h1, h3{text-align:center;}
+            div{height:40px; display:block; text-align:center;}
+            span{display:none; font-size:xx-large;}
+            .d1{
+                background-color:#FF6F61;
+            }
+            .d2{
+                background-color:#88B04B;                
+            }
+            .d3{
+                background-color:#F5DF4D;
+            }
+            #very1, #very2, #very3, #very4{
+                background-color:#6667AB;
+            }            
+            #real{
+                display:none;
+            }
+        </style>
+        <script>
+            a = confirm("Wait! Do you really access this page? ")
+            num = 10;
+            if(a){
+            }
+            else{
+                b = alert("Good Choice");
+                location.href = "main page.html";
+            }
+            var code1=0, code2=0, code3=0, code4=0, stop;            
+            stop = setInterval('check()', 1000);           
+            function check(){
+                document.getElementById("TimeLimit").innerHTML=--num;
+                if(num<=0){
+                    location.href = "main page.html"
+                }
+
+                if(code1==1 && code2==1 && code3==1 && code4==1){
+                clearInterval(stop);               
+                
+                x=document.getElementsByTagName("div");
+                x[0].style.display="none";                
+                for(var i = 2 ; i<17; i++){
+                    x[i].style.display="none";
+                }
+
+                y=document.getElementById("welcome");
+                y.innerHTML="WELCOME";
+                y.style.color="#6667AB";
+                y.style.fontSize="5em";
+
+                z=document.getElementById("real");
+                z.style.display="block";
+                
+                
+                }
+            }
+            function key1(){
+                code1=1;
+                a1 = document.getElementById("a1");
+                a1.style.display="inline";
+            }
+            function key2(){
+                code2=1;
+                a2 = document.getElementById("a2");
+                a2.style.display="inline";
+                
+            }
+            function key3(){
+                code3=1;
+                a3 = document.getElementById("a3");
+                a3.style.display="inline";
+            }
+            function key4(){
+                code4=1;
+                a4 = document.getElementById("a4");
+                a4.style.display="inline";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>EASTER EGG PAGE</h1>
+        <h3>and</h3>
+        <h1 id="welcome">BYE BYE</h1>
+        <div id="TimeLimit">10</div>
+        <div>
+        <span id="a1">GO</span><span id="a2">OD</span><span id="a3">&nbsp;&nbsp;PL</span><span id="a4">AY</span>
+        </div>
+
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div id="very1" onclick="key1()"></div>
+        <div class="d3"></div>
+        <div class="d2"></div>
+        <div class="d1"></div>
+        <div id="very2" onclick="key2()"></div>
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div id="very3" onclick="key3()"></div>
+        <div class="d2"></div>
+        <div id="very4" onclick="key4()"></div>
+        <div class="d1"></div>
+        <div id="real">
+
+            <br><br><br><br>
+            MADE BY
+            <br><br>
+            KANG HO HYEON
+            <br>
+            KIM SONG HUI
+            <br>
+            BAE JAE SUNG
+            <br>
+            JUNG SUNG SOO
+            <br>
+            JUNG SOO MI
+            <br><br>
+            Pantone chosen Veri Peri as color of the year, but it seems that green is actually color of the year. LOL
+            
+        </div>
+
+    </body>
+</html>

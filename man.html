@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Men's Fashion</title>
+        <script>
+            function move(){
+                location.href = "main page.html";
+            }
+        </script>
+        <style>
+            body {
+                margin-top: 30px;
+                background-color: #6667AB;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .page {
+                background-color: white;
+                border-radius: 10px;
+                width: 80%;
+                margin: 25px auto;
+            }
+            .nav-bar {
+                background-color: #0000007F;
+                color: lightgray;
+                text-align: center;
+                width: 100px;
+                position: fixed;
+                left: 10px;
+                top: 100px;
+                z-index: 1;
+                padding: 5px;
+            }
+            .nav-fold {
+                display: none;
+            }
+            .nav-item {
+                display: inline-block;
+                width: 100%;
+                padding: 5px 0;
+                color: lightgray;
+                text-decoration: none;
+            }
+            .nav-item:hover {
+                background-color: #6667AB7F;
+            }
+            .gallery {
+                margin: 50px;
+                animation: fadein-g 2s;
+            }
+            .gallery h3 {
+                margin: 0 0 2px 0;
+            }
+            .gallery div {
+                overflow: auto;
+             white-space: nowrap;
+            }
+            .gallery img {
+                height: 300px;
+                margin: 5px 20px 5px 0;
+            }
+            .gallery div::-webkit-scrollbar {
+                height: 10px;
+            }
+            .gallery div::-webkit-scrollbar-thumb {
+    background-color: #6667AB;
+    border-radius: 6px;
+}
+.gallery div::-webkit-scrollbar-track {
+    background-color: #000000CF;
+    border-radius: 6px;
+}
+            #logo{
+                text-align:center;
+            } 
+            #contentsbox {
+                background-color: white;
+                border-radius: 10px;
+                width: 80%;
+                margin: 25px auto;
+            }
+            #intro{
+                background-image:url("manimg/intro_image.jpg");
+                text-align:center;
+                height:250px;
+                color:white;
+                padding-top:50px;
+            }
+            .introsub{
+                display:inline-block;
+                width:50%;
+                color:lightgray;
+                animation: fadein 1.25s;              
+            }
+            
+            .introsub p {
+                font-size:small;
+            }
+
+            @keyframes fadein {
+    from {
+        margin-top: 100px;
+        opacity: 0%;
+    }
+    to {
+        margin-top: 0;
+        opacity: 100%;
+    }
+}
+@keyframes fadein-g {
+    from {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .page {
+        width: 90%;
+    }
+    .nav-bar {
+        width: auto;
+        max-width: 100px;
+    }
+    .nav-fold {
+        display: initial;
+        
+    }
+    .nav-fold:checked ~ a {
+        display: inline-block;
+    }
+    .nav-item {
+        display: none;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <input type="checkbox" class="nav-fold">
+            <a class="nav-item" href="main page.html">HOME</a>
+            <a class="nav-item" href="man.html">MAN</a>
+            <a class="nav-item" href="woman.html">WOMAN</a>
+            <a class="nav-item" href="interior.html">INTERIOR</a>
+            <a class="nav-item" href="cosmetic.html">COSMETIC</a>
+        </div>
+        <div class="page">
+            <div id="logo">               
+                <img src="womenimg/logo.jpg" onclick="move()" style="cursor: pointer;">
+            </div>        
+            <div id="intro">
+                <h1 class="introsub">MEN'S FASHION</h1>
+                <div class="introsub"><p>Being good at fashion brings tremendous charm. Fashion is a form of self-expression and autonomy at a particular period and place and in a specific context, of clothing, footwear, lifestyle, accessories, makeup, hairstyle, and body posture. The term implies a look defined by the fashion industry as that which is trending. Everything that is considered fashion is available and popularized by the fashion system (industry and media).
+
+                    Due to increased mass-production of commodities and clothing at lower prices and global reach, sustainability has become an urgent issue among politicians, brands, and consumers.</p>
+                </div>
+            </div>
+            <div class="gallery">
+                <h3>FULL-SET</h3>
+                <div>
+                <img src="manimg/FULLSET_1.jpg">
+                <img src="manimg/FULLSET_2.jpg">
+                <img src="manimg/FULLSET_4.jpg">
+                <img src="manimg/FULLSET_5.jpg">
+                <img src="manimg/FULLSET_6.jpg">           
+                </div>
+            </div>
+            <div class="gallery">
+                <h3>TOP</h3>
+                <div>
+                <img src="manimg/TOP_1.jpg">
+                <img src="manimg/TOP_2.jpg">
+                <img src="manimg/TOP_4.jpg">
+                <img src="manimg/TOP_5.jpg">
+                <img src="manimg/TOP_6.jpg">
+                <img src="manimg/TOP_7.jpg">
+                <img src="manimg/TOP_3.jpg">                
+                </div>
+            </div>
+            <div class="gallery">
+                <h3>SHOES</h3>
+                <div>
+                <img src="manimg/SHOES_1.jpg">
+                <img src="manimg/SHOES_2.jpg">
+                <img src="manimg/SHOES_3.jpg">
+                <img src="manimg/SHOES_5.jpg">
+                <img src="manimg/SHOES_6.jpg">
+                <img src="manimg/SHOES_7.jpg">
+                <img src="manimg/SHOES_4.jpg">                
+                </div>
+            </div>
+            <div class="gallery">
+                <h3>COLOR PALETTE</h3>
+                <p>If you want your own fashion, refer to the color palette</p>
+                <div>
+                    <img src="manimg/palette1.jpg">
+                    <img src="manimg/palette2.jpg">
+                    <img src="manimg/palette3.jpg">
+                    <img src="manimg/palette4.jpg">             
+                </div>
+            </div>              
+            <div>
+                <span>made by hohyeon</span>
+            </div>
+        </div>
+    </body>
+</html>
